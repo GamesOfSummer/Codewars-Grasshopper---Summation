@@ -5,7 +5,6 @@ https://www.codewars.com/kata/55d24f55d7dd296eb9000030/train/javascript
 
 Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
 
-
 ie - 
 ```
 summation(2) -> 3
@@ -17,42 +16,22 @@ summation(8) -> 36
 ```
 
 
-
-The obvious
-```
-function isDivisible(n, x, y) {
-  return n % x === 0 && n % y === 0
-}
-```
-
-the smarter
-```
-function isDivisible(n, x, y) {
-  return (n % x === 0 && n % y === 0) ? true : false;
-}
-```
-
-OR
+My Answer -
 
 ```
-function isDivisible(n, x, y) {
-    return (n%x)==0 && (n%y) == 0;
-}
+    const array = [...Array.from(Array(n).keys()), n];
+    return array.reduce((a, b) => a + b, 0);
 ```
 
-```
-let isDivisible = (n, x, y) => n % x == 0 && n % y == 0
-```
+I wasn't happy with the spread operator, but I sure as hell wasn't going to use a `for` loop when I knew there are better ways to handle this.
 
-
-the best
+Most of the 'solutions' all used `for` loops (frown), but I did see this, which intrigued me -
 
 ```
-function isDivisible(n, x, y) {
-  return !(n%x||n%y)
-}
+const summation = num => (
+  Array(num).fill(true)
+    .reduce((sum, item, index) => sum + index + 1, 0)
+);
 ```
 
-OR
-
-
+I'll have to research how the `fill` method works!
