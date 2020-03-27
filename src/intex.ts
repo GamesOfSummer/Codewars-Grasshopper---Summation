@@ -1,10 +1,10 @@
 
 
-export function isDivisible(n: number, x: number, y: number): boolean {
+export function summation(n: number): number {
 
-    if (n % x === 0 && n % y === 0) {
-        return true;
-    }
+    const array = Array.from(Array(10).keys())
+    //array.reduce
 
-    return false;
+    //reduce(() => x + x)
+    return 0;
 }

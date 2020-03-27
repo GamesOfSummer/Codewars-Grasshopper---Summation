@@ -1,9 +1,9 @@
 "use strict";
 exports.__esModule = true;
-function isDivisible(n, x, y) {
-    if (n % x === 0 && n % y === 0) {
-        return true;
-    }
-    return false;
+function summation(n) {
+    var array = Array.from(Array(10).keys());
+    //array.reduce
+    //reduce(() => x + x)
+    return 0;
 }
-exports.isDivisible = isDivisible;
+exports.summation = summation;
